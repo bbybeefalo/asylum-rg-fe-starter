@@ -8,6 +8,11 @@
 @tablet-large: ~"(min-width: 769px) and (max-width: 1024px)";
 @laptop: ~"(min-width: 1025px) and (max-width: 1280px)";
 
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
 .header {
     background-color: @main-color;
     display:flex;
@@ -41,14 +46,50 @@
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+ .graphs-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    font-family: 'acumin';
+ }
+
+ .grant-rates-by-office-graph-container {
+    text-align: center;
+ }
+
+ .gr-office-img {
+    height: 165px;
+    width: 320px;
+    margin-bottom: 10%;
+ }
+
+ .grant-rates-by-nationality-container {
+    text-align: center;
+ }
+
+ .gr-nationality-img {
+    height: 175px;
+    width: 200px;
+    margin-bottom: 10%;
+ }
+
+ .grant-rates-by-nationality-container {
+    text-align: center;
+ }
+
+ .gr-overtime-img {
+    height: 165px;
+    width: 300px;
+    margin-bottom: 10%;
+ }
 
 .view-more-data-btn-container {
+    display: flex;
+    justify-content: space-between;
     height: 44px;
-    width: 180px;
-    margin: 0 auto;
+    width: 300px;
+    margin: 0 auto 10%;
     text-align: center;
     margin-bottom: 10%;
 }
@@ -75,16 +116,54 @@
     font-size: 1.4rem;
 }
 
-// .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+ .bottom-section {
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'acumin';
+ }
+
+ .bottom-section h1 {
+    font-size: 3.5rem;
+ }
+
+ .bottom-section h2 {
+    font-size: 2.5rem;
+ }
+
+ .bottom-section h3 {
+    font-size: 1.2rem;
+ }
+
+ .insights-container {
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ .insight-one {
+    width: 25%;
+ }
+
+ .insight-two {
+    width: 25%;
+ }
+
+ .insight-three {
+    width: 25%;
+ }
+
+ .read-more-data-btn-container {
+    height: 44px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10%;
+ }
 
 .back-to-top {
-    width: 8%;
     font-size: 1.2rem;
     cursor: pointer;
     color: black;
-    margin: 5% auto;
+    text-align: center;
 }
 
 .ant-space-align-center {
@@ -137,6 +216,8 @@
     .grant-rates-by-office-graph-container {
         margin-top: 20%;
         margin-bottom: 40%;
+        text-align: center;
+        font-family: "acumin";
     }
 
     .grant-rates-by-nationality-container {
