@@ -7,6 +7,9 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import { Auth0Provider } from '@auth0/auth0-react';
+import AuthenticationButton from './components/common/AuthButton';
+import Profile from './components/common/Profile';
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
@@ -28,11 +31,17 @@ const { primary_accent_color } = colors;
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
-    <Provider store={store}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </Provider>
+    <Auth0Provider
+      domain="dev-uuczs4wsg1lgl7ot.us.auth0.com"
+      clientId="qzc8uhcDC3M17QZEHxIYYrEFuQJrh9AL"
+      redirectUri={window.location.origin}
+    >
+      <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Provider>
+    </Auth0Provider>
   </Router>,
   document.getElementById('root')
 );
@@ -49,11 +58,14 @@ export function App() {
           backgroundColor: primary_accent_color,
         }}
       >
+        <AuthenticationButton />
         <HeaderContent />
       </Header>
+
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
+        <Route path="/profile" component={Profile} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer

@@ -29,7 +29,7 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
-      {/* Graphs Section: Add code here for the graphs section for your first ticket */}
+
       <div class="graphs-section">
         <div class="grant-rates-by-office-graph-container">
           <img
